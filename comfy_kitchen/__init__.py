@@ -23,6 +23,7 @@ from .gated_delta import deltanet_conv_step, gated_delta_decode_fused
 from .gated_delta import is_available as gated_delta_decode_is_available
 from .indexed_norm import indexed_norm_convrot
 from .h3_qkv import h3_qkv_prequantize
+from .indexed_gate import int8_gemm_indexed_gate, int8_linear_indexed_gate
 from .registry import registry
 from .sage_attention import (
     PrequantizedInt8Attention,
@@ -103,6 +104,8 @@ __all__ = [
     "gemv_awq_w4a16",
     "fp16_linear",
     "int8_linear",
+    "int8_gemm_indexed_gate",
+    "int8_linear_indexed_gate",
     "w4a8_int8_linear",
     # Positional encoding
     "apply_rope",
